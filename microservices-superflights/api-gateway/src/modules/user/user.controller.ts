@@ -1,5 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { UserService } from './user.service';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Put } from '@nestjs/common';
 import { ClientProxySuperFlights } from 'src/common/proxy/client-proxy';
 import { UserDto } from './dto/user.dto';
 import {Observable} from "rxjs"
@@ -21,7 +20,17 @@ export class UserController {
   }
 
   @Get(':id')
-  findOne(@Param('id')id:string): Observable<IUser[]> {
-    return this._clientProxyUser.send(UserMSG.FIND_ALL, '')
+  findOne(@Param('id')id:string): Observable<IUser> {
+    return this._clientProxyUser.send(UserMSG.FIND_ONE,id)
+  }
+
+  @Put(':id')
+  update(@Param('id') id: string,@Body()userDto:UserDto): Observable<IUser> {
+    return this._clientProxyUser.send(UserMSG.UPDATE, {id,userDto})
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: string): Observable<any> {
+    return this._clientProxyUser.send(UserMSG.DELETE,id)
   }
 }

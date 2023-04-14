@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { UserController } from './user.controller';
+import { PassengersController } from './passengers.controller';
 import { ProxyModule } from 'src/common/proxy/proxy.module';
 
 @Module({
   imports:[ProxyModule],
-  controllers: [UserController],
+  controllers: [PassengersController],
   providers: []
 })
-export class UserModule {}
+export class PassengersModule {}
