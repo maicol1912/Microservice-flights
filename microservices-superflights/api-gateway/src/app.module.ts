@@ -4,6 +4,7 @@ import { FlightsModule } from './modules/flights/flights.module';
 import { PassengersModule } from './modules/passengers/passengers.module';
 import { UserModule } from './modules/user/user.module';
 import { ProxyModule } from './common/proxy/proxy.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -13,7 +14,8 @@ import { ProxyModule } from './common/proxy/proxy.module';
   FlightsModule,
   PassengersModule,
   UserModule,
-  ProxyModule
+  ProxyModule,
+  AuthModule
 ],
   controllers: [],
   providers: [],

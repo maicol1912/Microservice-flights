@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "0057b683-38d2-4b4b-9eb0-47f216223f3d",
+		"name": "Curso Udemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24860457"
+	},
+	"item": [
+		{
+			"name": "Passenger",
+			"item": [
+				{
+					"name": "Guardar passenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"maicol11\",\r\n    \"email\":\"passengdder1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Passenger",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar passenger por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger/64377617a7fbc1c95976ddd4",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger",
+								"64377617a7fbc1c95976ddd4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Passenger",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"maicol123\",\r\n    \"email\":\"maicol2@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger/643774ca380df4c2dcee2b0d",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger",
+								"643774ca380df4c2dcee2b0d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Passenger",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/passenger/643774ca380df4c2dcee2b0d",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"passenger",
+								"643774ca380df4c2dcee2b0d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight",
+			"item": [
+				{
+					"name": "Guardar Flight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\":\"dads\",\r\n    \"airplane\":\"212122 a 340\",\r\n    \"destinationCity\":\"lonfon\",\r\n    \"flightDate\":\"2021-01-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Flights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Flight por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/6438cdff43a105bd0efc54c6",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"6438cdff43a105bd0efc54c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Flight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\":\"2221\",\r\n    \"airplane\":\"irboss a 3401111\",\r\n    \"destinationCity\":\"lonfon\",\r\n    \"flightDate\":\"2021-01-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/6438cdff43a105bd0efc54c6",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"6438cdff43a105bd0efc54c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Flight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/6438cdff43a105bd0efc54c6",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"6438cdff43a105bd0efc54c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Flight - Add passenger",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\":\"2221\",\r\n    \"airplane\":\"irboss a 340\",\r\n    \"destinationCity\":\"lonfon\",\r\n    \"flightDate\":\"2021-01-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/flight/6438d4de2fd47739d320ced5/passenger/64377617a7fbc1c95976ddd4",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"flight",
+								"6438d4de2fd47739d320ced5",
+								"passenger",
+								"64377617a7fbc1c95976ddd4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Guardar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"JH\",\r\n    \"username\":\"maicol1234\",\r\n    \"email\":\"maicol21@gmail\",\r\n    \"password\":\"maicol1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"RANDOM 15\",\r\n    \"username\":\"arcila12\",\r\n    \"email\":\"maicol2@gmail\",\r\n    \"password\":\"maicol121\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user/643ab577ab5dc5cec318541c",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user",
+								"643ab577ab5dc5cec318541c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuario por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user/643ab577ab5dc5cec318541c",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user",
+								"643ab577ab5dc5cec318541c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/user/643ab577ab5dc5cec318541c",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"user",
+								"643ab577ab5dc5cec318541c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"maicol1234\",\r\n    \"password\":\"maicol1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/{{version}}/auth/signIn",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"auth",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
