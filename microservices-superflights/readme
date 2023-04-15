@@ -1,0 +1,18 @@
+we can connect to aws server, thanks to file .pem 
+in mobaxterm we put the .pem file to connect to ssh aws server
+
+
+--one time you have connected by ssh
+
+--sudo apt install
+--sudo apt upgrade
+--sudo apt install docker.io docker-compose
+--enter to opt / cd opt
+--mkdir microservice-flight
+
+--create file .env and docker compose with nano 
+
+-- sudo usermod -aG docker $USER
+-- sudo service docker restart
+-- docker-compose up -d
+
