@@ -12,11 +12,21 @@
 				{
 					"name": "Guardar passenger",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"maicol11\",\r\n    \"email\":\"passengdder1@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"name\":\"maicol11\",\r\n    \"email\":\"passengdder31@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -40,6 +50,16 @@
 				{
 					"name": "Listar Passenger",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -59,10 +79,20 @@
 				{
 					"name": "Listar passenger por id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/passenger/64377617a7fbc1c95976ddd4",
+							"raw": "{{endpoint}}/api/{{version}}/passenger/643ac89e3bc8b26cc520ca9e",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -70,7 +100,7 @@
 								"api",
 								"{{version}}",
 								"passenger",
-								"64377617a7fbc1c95976ddd4"
+								"643ac89e3bc8b26cc520ca9e"
 							]
 						}
 					},
@@ -79,11 +109,21 @@
 				{
 					"name": "Update Passenger",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"maicol123\",\r\n    \"email\":\"maicol2@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"name\":\"pinocho\",\r\n    \"email\":\"maicol2@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -91,7 +131,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/passenger/643774ca380df4c2dcee2b0d",
+							"raw": "{{endpoint}}/api/{{version}}/passenger/643ac89e3bc8b26cc520ca9e",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -99,7 +139,7 @@
 								"api",
 								"{{version}}",
 								"passenger",
-								"643774ca380df4c2dcee2b0d"
+								"643ac89e3bc8b26cc520ca9e"
 							]
 						}
 					},
@@ -108,10 +148,20 @@
 				{
 					"name": "Eliminar Passenger",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/passenger/643774ca380df4c2dcee2b0d",
+							"raw": "{{endpoint}}/api/{{version}}/passenger/643ac89e3bc8b26cc520ca9e",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -119,7 +169,7 @@
 								"api",
 								"{{version}}",
 								"passenger",
-								"643774ca380df4c2dcee2b0d"
+								"643ac89e3bc8b26cc520ca9e"
 							]
 						}
 					},
@@ -213,7 +263,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/flight/6438cdff43a105bd0efc54c6",
+							"raw": "{{endpoint}}/api/{{version}}/flight/643ac707edf344c57ba5db40",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -221,7 +271,7 @@
 								"api",
 								"{{version}}",
 								"flight",
-								"6438cdff43a105bd0efc54c6"
+								"643ac707edf344c57ba5db40"
 							]
 						}
 					},
@@ -252,7 +302,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/flight/6438cdff43a105bd0efc54c6",
+							"raw": "{{endpoint}}/api/{{version}}/flight/643ac707edf344c57ba5db40",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -260,7 +310,7 @@
 								"api",
 								"{{version}}",
 								"flight",
-								"6438cdff43a105bd0efc54c6"
+								"643ac707edf344c57ba5db40"
 							]
 						}
 					},
@@ -282,7 +332,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/flight/6438cdff43a105bd0efc54c6",
+							"raw": "{{endpoint}}/api/{{version}}/flight/643ac707edf344c57ba5db40",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -290,7 +340,7 @@
 								"api",
 								"{{version}}",
 								"flight",
-								"6438cdff43a105bd0efc54c6"
+								"643ac707edf344c57ba5db40"
 							]
 						}
 					},
@@ -345,6 +395,16 @@
 				{
 					"name": "Guardar usuario",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -387,7 +447,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"RANDOM 15\",\r\n    \"username\":\"arcila12\",\r\n    \"email\":\"maicol2@gmail\",\r\n    \"password\":\"maicol121\"\r\n}",
+							"raw": "{\r\n    \"name\":\"RANDOM 151\",\r\n    \"username\":\"arcila12\",\r\n    \"email\":\"maicol2@gmail\",\r\n    \"password\":\"maicol121\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -395,7 +455,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/user/643ab577ab5dc5cec318541c",
+							"raw": "{{endpoint}}/api/{{version}}/user/643ac8e39620b0ef5e94a806",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -403,7 +463,7 @@
 								"api",
 								"{{version}}",
 								"user",
-								"643ab577ab5dc5cec318541c"
+								"643ac8e39620b0ef5e94a806"
 							]
 						}
 					},
@@ -412,6 +472,16 @@
 				{
 					"name": "Listar Usuarios",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -444,7 +514,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/user/643ab577ab5dc5cec318541c",
+							"raw": "{{endpoint}}/api/{{version}}/user/643ac8e39620b0ef5e94a806",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -452,7 +522,7 @@
 								"api",
 								"{{version}}",
 								"user",
-								"643ab577ab5dc5cec318541c"
+								"643ac8e39620b0ef5e94a806"
 							]
 						}
 					},
@@ -474,7 +544,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{endpoint}}/api/{{version}}/user/643ab577ab5dc5cec318541c",
+							"raw": "{{endpoint}}/api/{{version}}/user/643ac8e39620b0ef5e94a806",
 							"host": [
 								"{{endpoint}}"
 							],
@@ -482,7 +552,7 @@
 								"api",
 								"{{version}}",
 								"user",
-								"643ab577ab5dc5cec318541c"
+								"643ac8e39620b0ef5e94a806"
 							]
 						}
 					},
