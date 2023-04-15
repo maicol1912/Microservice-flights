@@ -1,13 +1,11 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { ClientProxySuperFlights } from './client-proxy';
-
+@Global()
 @Module({
     imports:[ProxyModule],
     providers: [ClientProxySuperFlights],
     exports: [ClientProxySuperFlights]
 })
-export class ProxyModule {
-    
-}
+export class ProxyModule {}
 
 

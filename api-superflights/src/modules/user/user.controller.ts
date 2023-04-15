@@ -27,7 +27,7 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   @Put(':id')
   updateUser(@Param('id')id:string,@Body()userDto:UserDto){
-    console.log("entre aca")
+    
     return this.userService.update(id,userDto)
   }
 

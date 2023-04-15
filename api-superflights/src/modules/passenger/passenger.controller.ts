@@ -25,7 +25,7 @@ export class PassengerController {
 
   @Put(':id')
   updateUser(@Param('id') id: string, @Body() passengerDto: PassengerDto) {
-    console.log("entre aca")
+    
     return this.passengerService.update(id, passengerDto)
   }
 
