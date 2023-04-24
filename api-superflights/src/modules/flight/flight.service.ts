@@ -48,9 +48,8 @@ export class FlightService {
       throw new HttpException('flight not found', HttpStatus.NOT_FOUND)
     }
     return await this.model.findByIdAndUpdate(flightId,{
-      //TODO: EL ADD TO SET SE USA PARA SI EL ID YA EXISTE NO LO REEMPLAZE, SOLO GUARDE SI YA ESXISTE
       $addToSet: { passengers: passengerId }
     },{new:true})
-    .populate('passengers') //TODO: PARA QUE NOS TRAIGA TODA LA INFO DE LA OTRA TABLA Y NO SOLO ID
+    .populate('passengers')
   } 
 }

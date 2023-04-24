@@ -12,12 +12,10 @@ import { PassengerService } from '../passenger/passenger.service';
     {
       name:FLIGHT.name,
       useFactory:()=>{
-        //TODO:SIRVE PARA RETORNAR TODA LA INFO DE PASAJEROS Y NO SOLAMENTE EL ID, TRAE LA INFO DEL OTRO DOCUMENTO
         return FlightSchema.plugin(require('mongoose-autopopulate'))
       }
     }
   ]),
-  PassengerModule //TODO: COMO ESTE MODULO USA EL MODULO DE PASSENGER TAMBIEN LO DEBEMOS IMPORTAR
 ],
   controllers: [FlightController],
   providers: [FlightService]

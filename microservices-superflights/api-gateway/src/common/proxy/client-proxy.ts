@@ -6,7 +6,6 @@ import { RabbitMQ } from "src/common/constants/constants";
 export class ClientProxySuperFlights{
     constructor(private readonly config:ConfigService){}
 
-    //TODO: CREAR LA CONEXION AL CLUSTER POR MEDIO QUEUE DEL USUARIO 
     clientProxyUsers():ClientProxy{
         return ClientProxyFactory.create({
             transport:Transport.RMQ,
@@ -17,7 +16,6 @@ export class ClientProxySuperFlights{
         });
     }
 
-    //TODO: CREAR LA CONEXION AL CLUSTER POR MEDIO QUEUE DEL PASSENGER
     clientProxyPassengers(): ClientProxy {
         return ClientProxyFactory.create({
             transport: Transport.RMQ,
@@ -28,7 +26,6 @@ export class ClientProxySuperFlights{
         });
     }
 
-    //TODO: CREAR LA CONEXION AL CLUSTER POR MEDIO QUEUE DEL FLIGHT 
     clientProxyFlights(): ClientProxy {
         return ClientProxyFactory.create({
             transport: Transport.RMQ,

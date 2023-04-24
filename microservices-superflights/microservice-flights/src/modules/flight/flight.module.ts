@@ -12,14 +12,12 @@ import { PassengerSchema } from './schema/passenger.schema';
     {
       name:FLIGHT.name,
       useFactory:()=>{
-        //TODO:SIRVE PARA RETORNAR TODA LA INFO DE PASAJEROS Y NO SOLAMENTE EL ID, TRAE LA INFO DEL OTRO DOCUMENTO
         return FlightSchema.plugin(require('mongoose-autopopulate'))
       }
     },
     {
       name: PASSENGER.name,
       useFactory: () => {
-        //TODO:SIRVE PARA RETORNAR TODA LA INFO DE PASAJEROS Y NO SOLAMENTE EL ID, TRAE LA INFO DEL OTRO DOCUMENTO
         return PassengerSchema.plugin(require('mongoose-autopopulate'))
       }
     }
