@@ -7,9 +7,7 @@ import { UserMSG } from 'src/common/constants/constants';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  //TODO: SE SUSCRIBE CADA QUE HAYA UN EVENTO DE ESTE TIPO, ENTONCES ESTE SE EJECUTA
   @MessagePattern(UserMSG.CREATE)
-  //TODO: EL PAYLOAD ES EL TIPO DE DATO QUE LLEGA ES COMO UN BODY PERO EN MICROSERVICES
   create(@Payload() userDto: UserDto) {
     return this.userService.create(userDto);
   }
@@ -20,7 +18,6 @@ export class UserController {
   } 
 
   @MessagePattern(UserMSG.FIND_ONE)
-  //TODO: ES EL ID QUE LLEGA PARA FILTRAR LOS REGISTROS
   findOne(@Payload()id:string){
     return this.userService.findOne(id)
   }
